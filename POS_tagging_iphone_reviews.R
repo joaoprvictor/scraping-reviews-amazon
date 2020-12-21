@@ -1,3 +1,5 @@
+### Based on: https://slcladal.github.io/tagging.html
+
 #Loading packages
 # set options
 options(stringsAsFactors = F)         # no automatic data transformation
@@ -47,7 +49,7 @@ POStag <- function(object){
   # define pos annotator
   pos_tag_annotator <- Maxent_POS_Tag_Annotator(language = "en", probs = FALSE, 
                                                 # WARNING: YOU NEED TO INCLUDE YOUR OWN PATH HERE!                                            
-                                                model = "C:\\Users\\João\\Documents\\R\\win-library\\4.0\\openNLPdata\\models")
+                                                model = "C:\\Users\\JoÃ£o\\Documents\\R\\win-library\\4.0\\openNLPdata\\models")
   Corpus <- lapply(corpus.tmp, function(x){
     x <- as.String(x)  }  )
   # loop over file contents
