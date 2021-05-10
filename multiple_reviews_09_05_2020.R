@@ -53,8 +53,8 @@ for (j in urls){
                                data.frame(text = review_text,
                                           rate = review_rate,
                                           product_name = product))%>%
-      mutate(across(where(is.character), str_trim))%>%
-      mutate(across(where(is.character), str_replace, pattern = "\\.", replacement = "\\."))
+      mutate(across(where(is.character), str_replace, pattern = "\\.", replacement = "\\. "))%>%
+      mutate(across(where(is.character), str_squish))
   }
 }
 view(reviews)
